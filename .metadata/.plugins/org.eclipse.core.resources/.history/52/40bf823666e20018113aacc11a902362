@@ -1,0 +1,17 @@
+package com.patryk.service;
+
+import java.awt.List;
+
+import com.patryk.model.Customer;
+import com.patryk.repository.CustomerRepository;
+import com.patryk.repository.HibernateCustomerRepositoryImpl;
+
+public class CustomerServiceImpl {
+
+	private CustomerRepository customerRepository = new HibernateCustomerRepositoryImpl();
+
+	public List<Customer> findAll(){
+		
+		return customerRepository.findAll();
+	}
+}

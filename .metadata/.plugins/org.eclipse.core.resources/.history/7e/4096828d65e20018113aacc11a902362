@@ -1,0 +1,5 @@
+package com.patryk.repository;
+
+public class HibernateCustomerRepositoryImpl {
+
+}

@@ -1,0 +1,21 @@
+package com.patryk.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.patryk.model.Customer;
+import com.patryk.repository.CustomerRepository;
+import com.patryk.repository.HibernateCustomerRepositoryImpl;
+
+@Service("customerService")
+public class CustomerServiceImpl implements CustomerService {
+
+	private CustomerRepository customerRepository = new HibernateCustomerRepositoryImpl();
+
+	@Override
+	public List<Customer> findAll() {
+
+		return customerRepository.findAll();
+	}
+}

@@ -1,0 +1,23 @@
+package com.patryk.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.patryk.model.Customer;
+import com.patryk.repository.CustomerRepository;
+import com.patryk.repository.HibernateCustomerRepositoryImpl;
+
+@Service("customerService")
+public class CustomerServiceImpl implements CustomerService {
+
+	@Autowired
+	private CustomerRepository customerRepository;
+
+	@Override
+	public List<Customer> findAll() {
+
+		return customerRepository.findAll();
+	}
+}
